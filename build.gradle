@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'idea'
+}
+
+group 'sirdir.space'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+test {
+    useTestNG()
+    scanForTestClasses = false
+    testLogging.showStandardStreams = true
+}
+
+dependencies {
+    compile('io.cucumber:cucumber-java:4.3.0')
+    compile('io.cucumber:cucumber-testng:4.3.0')
+}
